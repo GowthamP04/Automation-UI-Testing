@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+
+<parameter name="emailID" value="koushik350@gmail.com"></parameter>
+<parameter name="password" value="Pass123$"></parameter>
+  <test thread-count="5" name="ChromeTest">
+  <parameter name="browser" value="Chrome"></parameter>
+  <classes>
+  <class name="testNG.Login"></class>
+  </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="EdgeTest">
+    <parameter name="browser" value="Edge"></parameter>
+    <classes>
+    <class name="testNG.Login"></class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
